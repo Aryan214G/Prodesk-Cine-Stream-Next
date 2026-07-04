@@ -1,0 +1,1 @@
+1) What is Next.js? How is it different from React.js? Help me convert my react project into next.js.
