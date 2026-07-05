@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { getPopularMovies, searchMovies } from '../services/tmdb';
-import MovieCard from '../components/MovieCard';
-import SearchBar from '../components/SearchBar';
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { getPopularMovies, searchMovies } from '@/services/tmdb';
+import MovieCard from '@/components/MovieCard';
+import SearchBar from '@/components/SearchBar';
 
 const Home = ({ favorites, setFavorites }) => {
 
