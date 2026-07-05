@@ -1,7 +1,11 @@
+"use client";
 import React from 'react'
-import MovieCard from "../components/MovieCard";
+import MovieCard from "@/components/MovieCard";
 
-const Favorites = ({ favorites, setFavorites }) => {
+const Favorites = ({
+    favorites = [],
+    setFavorites = () => {}
+}) => {
     return (
         <div>
             <h1>My Favorites</h1>

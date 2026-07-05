@@ -1,27 +1,27 @@
-1) What is Next.js? How is it different from React.js? Help me convert my react project into next.js.
+# Prompts.md
 
-2) This is my react project structure:
-```cd cine-stream 
-tree src -L 2
+1. what is next.js? how is it different from react? help me convert my react project to next.js using the app router.
+
+2. this is my react project structure:
+
 src
 ├── App.css
 ├── App.jsx
 ├── assets
-│   ├── hero.png
-│   ├── react.svg
-│   └── vite.svg
 ├── components
-│   ├── MovieCard.jsx
-│   ├── Navbar.jsx
-│   └── SearchBar.jsx
 ├── index.css
 ├── main.jsx
 ├── pages
-│   ├── Favorites.jsx
-│   └── Home.jsx
 └── services
-    └── tmdb.js
 
-5 directories, 13 files```
+help me reorganize this into a next.js project structure.
 
-Help me convert it into next.js structure.
+3. after copying my project into next.js i got "module not found: can't resolve 'axios'". why is this happening and how do i fix it?
+
+4. why doesn't import.meta.env work in next.js? how do i use environment variables instead?
+
+5. after removing app.jsx while migrating to next.js, my favorites state is undefined. why is this happening and what's the recommended way to share state between pages?
+
+6. which files in my project need "use client"? explain how to identify client components in next.js.
+
+7. how do i replace react-router-dom with next.js app router? what changes do i need to make to links and routes?

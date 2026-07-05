@@ -4,7 +4,10 @@ import { getPopularMovies, searchMovies } from '@/services/tmdb';
 import MovieCard from '@/components/MovieCard';
 import SearchBar from '@/components/SearchBar';
 
-const Home = ({ favorites, setFavorites }) => {
+const Home = ({
+    favorites = [],
+    setFavorites = () => {}
+}) => {
 
     const [movies, setMovies] = useState([]);
     const [searchText, setSearchText] = useState("");
