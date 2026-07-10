@@ -32,3 +32,4 @@ help me reorganize this into a next.js project structure.
 1) What is redux and how do I set it up?
 2) What is a slice?
 3) What is a reducer?
+4) Okay I have set up favoritesSlice.js, and imported its reducer into store.js. What do I do next?
