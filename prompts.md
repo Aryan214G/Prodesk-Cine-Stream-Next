@@ -25,3 +25,10 @@ help me reorganize this into a next.js project structure.
 6. which files in my project need "use client"? explain how to identify client components in next.js.
 
 7. how do i replace react-router-dom with next.js app router? what changes do i need to make to links and routes?
+
+
+# Sprint 10 prompts
+
+1) What is redux and how do I set it up?
+2) What is a slice?
+3) What is a reducer?
