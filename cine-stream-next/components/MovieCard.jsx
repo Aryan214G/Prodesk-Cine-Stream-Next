@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector, useDispatch } from "react-redux";
-import { addFavorite } from "@/store/slices/favoritesSlice";
+import { addFavorite, removeFavorite } from "@/store/slices/favoritesSlice";
 
 const MovieCard = ({ movie }) => {
 
@@ -29,17 +29,11 @@ const MovieCard = ({ movie }) => {
 
         if (!isFavorite) {
 
-            setFavorites([
-                ...favorites,
-                movie
-            ]);
+            dispatch(addFavorite(movie));
 
         } else {
 
-            setFavorites(
-                favorites.filter(favorite =>
-                    favorite.id !== movie.id)
-            );
+            dispatch(removeFavorite(movie.id));
         }
     }
 
