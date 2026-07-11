@@ -13,17 +13,9 @@ const MovieCard = ({ movie }) => {
 
     const dispatch = useDispatch();
 
-    let isFavorite = favorites.some(
+    const isFavorite = favorites.some(
         favorite => favorite.id === movie.id
     );
-
-    for (let i = 0; i < favorites.length; i++) {
-
-        if (favorites[i].id === movie.id) {
-            isFavorite = true;
-            break;
-        }
-    }
 
     function toggleFavorite() {
 
