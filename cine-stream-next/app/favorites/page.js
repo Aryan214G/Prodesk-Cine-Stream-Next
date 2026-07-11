@@ -18,8 +18,6 @@ const Favorites = () => {
 
                             key={movie.id}
                             movie={movie}
-                            favorites={favorites}
-                            setFavorites={setFavorites}
                         />
                     )
                 }

@@ -15,7 +15,7 @@ const Home = () => {
     const favorites = useSelector(
         state => state.favorites.favorites
     )
-    
+
     const loadPopularMovies = async (page) => {
 
         setLoading(true);
@@ -137,8 +137,6 @@ const Home = () => {
 
                             key={movie.id}
                             movie={movie}
-                            favorites={favorites}
-                            setFavorites={setFavorites}
                         />
                     )
                 }
