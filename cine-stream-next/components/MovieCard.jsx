@@ -3,7 +3,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addFavorite, removeFavorite } from "@/store/slices/favoritesSlice";
 
-const MovieCard = ({ key, movie }) => {
+const MovieCard = ({ movie }) => {
 
     const base_url = "https://image.tmdb.org/t/p/w500";
 

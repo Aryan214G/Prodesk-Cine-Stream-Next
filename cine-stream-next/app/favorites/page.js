@@ -1,10 +1,14 @@
 "use client";
 import React from 'react'
 import MovieCard from "@/components/MovieCard";
-import { useFavorites } from "@/context/FavoritesContext";
+import { useSelector } from 'react-redux';
 
 const Favorites = () => {
-    const { favorites, setFavorites } = useFavorites();
+
+    const favorites = useSelector(
+        state => state.favorites.favorites
+    )
+
     return (
         <div>
             <h1>My Favorites</h1>
