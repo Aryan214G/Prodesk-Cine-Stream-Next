@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { getPopularMovies, searchMovies } from '@/services/tmdb';
-import { useFavorites } from "@/context/FavoritesContext";
+import { useSelector } from "react-redux";
 import MovieCard from '@/components/MovieCard';
 import SearchBar from '@/components/SearchBar';
 
@@ -12,7 +12,9 @@ const Home = () => {
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const loaderRef = useRef(null);
-    const { favorites, setFavorites } = useFavorites();
+    const favorites = useSelector(
+        state => state.favorites.favorites
+    )
     
     const loadPopularMovies = async (page) => {
 
