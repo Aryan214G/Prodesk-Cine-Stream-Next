@@ -55,4 +55,60 @@ __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$FavoritesContext$2e$j
 
 Next.js version: 16.2.10 (Turbopack)
 
+6) Explain this error:
+## Error Type
+Recoverable Error
+
+## Error Message
+Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="favorites/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/favorites" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="favorites/...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Favorites} serverProvidedParams={{...}}>
+                      <Favorites params={Promise} searchParams={Promise}>
+                        <div>
+                          <h1>
+                          <div className="grid">
+                            <MovieCard movie={{adult:false, ...}}>
++                             <div className="movie-card">
+                            ...
+                  ...
+                ...
+      ...
+
+
+
+    at div (unknown:0:0)
+    at MovieCard (components/MovieCard.jsx:42:9)
+    at Favorites/<.children<.children< (app/favorites/page.js:21:25)
+    at Favorites (app/favorites/page.js:19:31)
+
+## Code Frame
+  40 |
+  41 |     return (
+> 42 |         <div className="movie-card">
+     |         ^
+  43 |             <div className="movie-poster">
+  44 |                 {movie.poster_path ? (
+  45 |                     <img
+
+Next.js version: 16.2.10 (Turbopack)
 
