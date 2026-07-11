@@ -33,3 +33,26 @@ help me reorganize this into a next.js project structure.
 2) What is a slice?
 3) What is a reducer?
 4) Okay I have set up favoritesSlice.js, and imported its reducer into store.js. What do I do next?
+
+5) I got this error when I tried running the app:
+## Error Type
+Runtime TypeError
+
+## Error Message
+__TURBOPACK__imported__module__$5b$project$5d2f$context$2f$FavoritesContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useFavorites"]() is undefined
+
+
+    at Home (app/page.js:15:53)
+
+## Code Frame
+  13 |     const [loading, setLoading] = useState(false);
+  14 |     const loaderRef = useRef(null);
+> 15 |     const { favorites, setFavorites } = useFavorites();
+     |                                                     ^
+  16 |     
+  17 |     const loadPopularMovies = async (page) => {
+  18 |
+
+Next.js version: 16.2.10 (Turbopack)
+
+

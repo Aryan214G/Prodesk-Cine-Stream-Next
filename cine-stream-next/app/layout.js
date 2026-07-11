@@ -1,5 +1,5 @@
 import "./globals.css";
-import { FavoritesProvider } from "@/context/FavoritesContext";
+import StoreProvider from "@/store/StoreProvider";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
@@ -10,10 +10,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <FavoritesProvider>
+        <StoreProvider>
         <Navbar />
         {children}
-    </FavoritesProvider>
+    </StoreProvider>
       </body>
     </html>
   );
