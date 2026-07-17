@@ -112,3 +112,11 @@ https://react.dev/link/hydration-mismatch
 
 Next.js version: 16.2.10 (Turbopack)
 
+# Sprint 11 prompts
+
+1) I am adding Jest and React Testing Library to a Next.js project. Explain what each dependency does and why it is needed. Don't just give setup steps, teach me the purpose of each.
+
+2) Explain how Jest executes a React Testing Library test. I want to understand what render(), screen, expect(), and jest-dom are for.
+
+3) Help me write tests for my SearchBar React component. First explain what behaviors should be tested, then guide me through writing the tests instead of giving the entire solution immediately.
+
