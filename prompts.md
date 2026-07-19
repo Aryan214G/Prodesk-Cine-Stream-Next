@@ -120,3 +120,4 @@ Next.js version: 16.2.10 (Turbopack)
 
 3) Help me write tests for my SearchBar React component. First explain what behaviors should be tested, then guide me through writing the tests instead of giving the entire solution immediately.
 
+4) Here are my SearchBar and MovieCard components. Suggest me what kinds of tests to write for these.
